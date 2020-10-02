@@ -1,0 +1,65 @@
+/* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
+
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+body {
+   margin: 0;
+   background: rgb(69, 186, 221);
+}
+
+.container {
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background: url(./robot.gif);
+   background-size: contain;
+   background-position: left center;
+   background-repeat: no-repeat;
+}
+
+#btn {
+   cursor: pointer;
+   outline: none;
+   width: 20rem;
+   height: 5rem;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 2rem;
+   color: white;
+   background: #ff3482;
+   border: none;
+   border-radius: .5rem;
+   box-shadow: .2rem .2rem 2rem 1rem rgba(0, 0, 0, .2);
+
+   transition: transform .1s linear, filter .15s linear;
+}
+
+#btn:hover {
+   filter: brightness(95%);
+}
+
+#btn:active {
+   transform: scale(.95);
+}
+
+#btn:disabled {
+   cursor: default;
+   filter: brightness(30%);
+}
+
+/* Media Query: Table or Smaller */
+@media screen and (max-width: 100rem) {
+   .container {
+      background-size: cover;
+      background-position: center center;
+   }
+
+   #btn {
+      box-shadow: .5rem .5rem 3rem 2rem rgba(0, 0, 0, .5);
+   }
+} 
